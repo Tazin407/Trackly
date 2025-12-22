@@ -10,5 +10,5 @@ class ProjectSerializer(serializers.ModelSerializer):
 class ProjectCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        exclude = ('owner')
+        exclude = ['owner']
         read_only_fields = ('created_at', 'updated_at')

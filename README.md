@@ -1,7 +1,7 @@
 # Trackly API Documentation
 
 ## Overview
-Trackly is a professional task management API built with Django REST Framework. It provides comprehensive project and task management capabilities with user authentication.
+Trackly is a task management API built with Django REST Framework. It provides comprehensive project and task management capabilities with user authentication.
 
 ## Base URL
 ```
