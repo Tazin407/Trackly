@@ -16,13 +16,4 @@ class TaskCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = ('title', 'description', 'project', 'status', 'priority', 'due_date')
-        
-    def validate_project(self, value):
-        """Ensure the project exists and user has access."""
-        request = self.context.get('request')
-        if request and hasattr(request, 'user'):
-            if value.owner != request.user:
-                raise serializers.ValidationError(
-                    "You don't have permission to create tasks in this project."
-                )
-        return value
+        read_only_fields = ('created_at', 'updated_at')
